@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  database:
+    build:
+      context: .
+      dockerfile: ./database/postgres.dockerfile
+    image: "postgres-todo-demo"
+    container_name: ${PG_CONTAINER_NAME}
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+       - dbdata:/var/lib/postgresql/data
+       - ./database/scripts:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+    restart: always
+volumes:
+    dbdata:
+      external: true
+
