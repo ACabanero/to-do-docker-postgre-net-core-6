@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "f86f029f-4b6c-4ff0-a974-c06620668b11",
+		"name": "Reganosa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    const responseJson = pm.response.json();\r",
+							"    pm.expect(responseJson[0].id).to.eql(1);\r",
+							"    pm.expect(responseJson[1].id).to.eql(2);\r",
+							"    pm.expect(responseJson[2].id).to.eql(3);\r",
+							"    pm.expect(responseJson[3].id).to.eql(4);\r",
+							"    pm.expect(responseJson[4].id).to.eql(5);\r",
+							"    pm.expect(responseJson[5].id).to.eql(6);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7073/api/ToDo?title=task",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7073",
+					"path": [
+						"api",
+						"ToDo"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "task"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:7073/api/ToDo?title=task",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    const responseJson = pm.response.json();\r",
+							"    pm.expect(responseJson[0].id).to.eql(1);\r",
+							"    pm.expect(responseJson[1].id).to.eql(2);\r",
+							"    pm.expect(responseJson[2].id).to.eql(3);\r",
+							"    pm.expect(responseJson[3].id).to.eql(4);\r",
+							"    pm.expect(responseJson[4].id).to.eql(5);\r",
+							"    pm.expect(responseJson[5].id).to.eql(6);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7073/api/ToDo?title=task",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7073",
+					"path": [
+						"api",
+						"ToDo"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "task"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "OrganizationName",
+			"value": "reganosadigi",
+			"type": "default"
+		},
+		{
+			"key": "version",
+			"value": "v2.0",
+			"type": "default"
+		}
+	]
+}

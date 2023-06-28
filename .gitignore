@@ -6,3 +6,4 @@
 /api/ToDo/src/ToDo.*/bin
 /api/ToDo/src/ToDo.*/obj
 /spa/src/to-do-app/.vscode
+/parallel-test/node_modules

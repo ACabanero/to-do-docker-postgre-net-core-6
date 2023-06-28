@@ -16,7 +16,7 @@ namespace ToDo.Api.Controllers
         public ToDoController(IToDoService service) { 
             _service = service ?? throw new ArgumentNullException(nameof(service));
         }
-        // GET: api/<ToDoController>/search=coco
+        // GET: api/<ToDoController>?title=coco
         [HttpGet()]
         public async Task<IEnumerable<ToDoDto?>> Search([FromQuery]string title)
         {
